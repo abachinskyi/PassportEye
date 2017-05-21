@@ -20,17 +20,8 @@ def ocr(img, mrz_mode=True):
     :param mrz_mode: when this is True (default) the tesseract is configured to recognize MRZs rather than arbitrary texts.
     """
     input_file_name = '%s.bmp' % pytesseract.tempnam()
-    print("================================================")
-    print(input_file_name)
-    print("================================================")
     output_file_name_base = '%s' % pytesseract.tempnam()
-    print("================================================")
-    print(output_file_name_base)
-    print("================================================")
     output_file_name = "%s.txt" % output_file_name_base
-    print("================================================")
-    print(output_file_name)
-    print("================================================")
     try:
         imsave(input_file_name, img)
 
